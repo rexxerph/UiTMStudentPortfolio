@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UiTM Student E-Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-card">
+
+            <!-- UiTM Logo -->
+            <div class="logo-area">
+                <img src="images/OIP.png" alt="UiTM Logo" class="uitm-logo" onerror="this.style.display='none'">
+            </div>
+
+            <h1>UiTM Student E-Portfolio</h1>
+            <p class="subtitle">Generate your digital student portfolio</p>
+
+            <!-- View Profile Button -->
+            <div class="main-actions">
+                <a href="PortfolioServlet?action=view" class="view-btn">View All Profiles</a>
+            </div>
+
+            <!-- Search Profile Form -->
+            <form action="PortfolioServlet" method="get" class="home-search-form">
+                <input type="hidden" name="action" value="search">
+                <input type="text" name="keyword" placeholder="Search profile by name or student ID">
+                <button type="submit">Search Profile</button>
+            </form>
+
+            <!-- Generate Portfolio Form -->
+            <form action="PortfolioServlet" method="post" onsubmit="return validateForm()">
+
+                <!-- IMPORTANT: This prevents NullPointerException -->
+                <input type="hidden" name="action" value="insert">
+
+                <label>Full Name</label>
+                <input 
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    placeholder="Enter your full name" 
+                    required>
+
+                <label>Student ID</label>
+                <input 
+                    type="text" 
+                    name="studentId" 
+                    id="studentId" 
+                    placeholder="Enter your student ID" 
+                    required>
+
+                <label>Program</label>
+                <input 
+                    type="text" 
+                    name="program" 
+                    id="program" 
+                    placeholder="Example: Bachelor of Computer Science" 
+                    required>
+
+                <label>UiTM Student Email</label>
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email"
+                    placeholder="example@student.uitm.edu.my"
+                    pattern="^[a-zA-Z0-9._%+-]+@student\.uitm\.edu\.my$"
+                    title="Please enter a valid UiTM student email ending with @student.uitm.edu.my"
+                    required>
+
+                <label>Study Mode</label>
+                <select name="studyMode" id="studyMode" required>
+                    <option value="">-- Select study mode --</option>
+                    <option value="Full time">Full time</option>
+                    <option value="Part time">Part time</option>
+                </select>
+
+                <label>Hobbies / Interests</label>
+                <input 
+                    type="text" 
+                    name="hobbies" 
+                    id="hobbies" 
+                    placeholder="Example: Coding, reading, badminton" 
+                    required>
+
+                <label>Short Self-Introduction</label>
+                <textarea 
+                    name="intro" 
+                    id="intro" 
+                    rows="5" 
+                    maxlength="250"
+                    placeholder="Write a short introduction about yourself" 
+                    onkeyup="countCharacters()"
+                    required></textarea>
+
+                <p class="counter">
+                    Characters: <span id="charCount">0</span>/250
+                </p>
+
+                <button type="submit">Generate Portfolio</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
