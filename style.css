@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #1b1464, #6f1d77, #f4c542);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.form-card,
+.portfolio-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.logo-area {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.uitm-logo {
+    width: 130px;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1b1464;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #1b1464;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6f1d77;
+    box-shadow: 0 0 6px rgba(111, 29, 119, 0.4);
+}
+
+.counter {
+    font-size: 13px;
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background-color: #1b1464;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6f1d77;
+}
+
+.portfolio-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.portfolio-header p {
+    color: #666;
+}
+
+.info-section {
+    margin-top: 25px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background-color: #f7f5ff;
+    border-radius: 8px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #1b1464;
+}
+
+.info-value {
+    text-align: right;
+    color: #333;
+}
+
+.intro-box {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #fff8db;
+    border-left: 6px solid #f4c542;
+    border-radius: 10px;
+}
+
+.intro-box h3 {
+    color: #1b1464;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #6f1d77;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #1b1464;
+}
+
+@media screen and (max-width: 600px) {
+    .form-card,
+    .portfolio-card {
+        padding: 25px;
+    }
+
+    .info-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .info-value {
+        text-align: left;
+    }
+
+    .uitm-logo {
+        width: 100px;
+    }
+}
